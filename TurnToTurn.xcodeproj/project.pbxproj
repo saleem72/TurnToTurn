@@ -52,9 +52,15 @@
 		CAD1503328350C60005E265D /* TurnToTurn */ = {
 			isa = PBXGroup;
 			children = (
-				CAD1503428350C60005E265D /* TurnToTurnApp.swift */,
-				CAD1503628350C60005E265D /* ContentView.swift */,
-				CAD1503828350C62005E265D /* Assets.xcassets */,
+				CAD1504C28350CD5005E265D /* Resourse */,
+				CAD1504B28350CCD005E265D /* Extensions */,
+				CAD1504A28350CC5005E265D /* Modifires */,
+				CAD1504928350CBC005E265D /* Services */,
+				CAD1504728350CA4005E265D /* Maps */,
+				CAD1504828350CB2005E265D /* Models */,
+				CAD1504628350C9E005E265D /* Shapes */,
+				CAD1504528350C98005E265D /* Views */,
+				CAD1504428350C92005E265D /* Screens */,
 				CAD1503D28350C62005E265D /* Info.plist */,
 				CAD1503A28350C62005E265D /* Preview Content */,
 			);
@@ -67,6 +73,72 @@
 				CAD1503B28350C62005E265D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CAD1504428350C92005E265D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CAD1504528350C98005E265D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAD1504628350C9E005E265D /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		CAD1504728350CA4005E265D /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		CAD1504828350CB2005E265D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAD1504928350CBC005E265D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CAD1504A28350CC5005E265D /* Modifires */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifires;
+			sourceTree = "<group>";
+		};
+		CAD1504B28350CCD005E265D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAD1504C28350CD5005E265D /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1503428350C60005E265D /* TurnToTurnApp.swift */,
+				CAD1503628350C60005E265D /* ContentView.swift */,
+				CAD1503828350C62005E265D /* Assets.xcassets */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
