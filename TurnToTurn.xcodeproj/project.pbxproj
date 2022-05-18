@@ -11,6 +11,33 @@
 		CAD1503728350C60005E265D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1503628350C60005E265D /* ContentView.swift */; };
 		CAD1503928350C62005E265D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD1503828350C62005E265D /* Assets.xcassets */; };
 		CAD1503C28350C62005E265D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD1503B28350C62005E265D /* Preview Assets.xcassets */; };
+		CAD1505728350D67005E265D /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1504E28350D67005E265D /* Font+Extension.swift */; };
+		CAD1505828350D67005E265D /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1504F28350D67005E265D /* MKCoordinateRegion.swift */; };
+		CAD1505928350D67005E265D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1505028350D67005E265D /* Color+Extension.swift */; };
+		CAD1505A28350D67005E265D /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1505128350D67005E265D /* FileManager+Extension.swift */; };
+		CAD1505B28350D67005E265D /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1505228350D67005E265D /* Double+Extension.swift */; };
+		CAD1505C28350D67005E265D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1505328350D67005E265D /* Date+Extension.swift */; };
+		CAD1505D28350D67005E265D /* LinearGradient+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1505428350D67005E265D /* LinearGradient+Extension.swift */; };
+		CAD1505E28350D67005E265D /* CLPlacemark+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1505528350D67005E265D /* CLPlacemark+Extension.swift */; };
+		CAD1505F28350D67005E265D /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1505628350D67005E265D /* Int+Extension.swift */; };
+		CAD1506328350D90005E265D /* LandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1506228350D90005E265D /* LandingScreen.swift */; };
+		CAD1506628350DB0005E265D /* AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1506528350DB0005E265D /* AnimatedText.swift */; };
+		CAD1506A28350DF8005E265D /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1506928350DF8005E265D /* HomeScreen.swift */; };
+		CAD1506E28350E29005E265D /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1506D28350E29005E265D /* MapManager.swift */; };
+		CAD1507128350EB7005E265D /* TabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507028350EB7005E265D /* TabbarItem.swift */; };
+		CAD1507528350F3B005E265D /* AppTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507328350F3B005E265D /* AppTabbarView.swift */; };
+		CAD1507628350F3B005E265D /* TabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507428350F3B005E265D /* TabbarButton.swift */; };
+		CAD1507D28350F61005E265D /* TabbarBGShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507828350F61005E265D /* TabbarBGShape.swift */; };
+		CAD1507E28350F61005E265D /* Ellipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507928350F61005E265D /* Ellipes.swift */; };
+		CAD1507F28350F61005E265D /* CustomRoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507A28350F61005E265D /* CustomRoundedShape.swift */; };
+		CAD1508028350F61005E265D /* TabbarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507B28350F61005E265D /* TabbarShape.swift */; };
+		CAD1508128350F61005E265D /* NavigationButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1507C28350F61005E265D /* NavigationButtonShape.swift */; };
+		CAD1508428350FA8005E265D /* NavigationButtonDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1508328350FA8005E265D /* NavigationButtonDirection.swift */; };
+		CAD1508728351081005E265D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1508628351081005E265D /* BackgroundView.swift */; };
+		CAD1508B283512AD005E265D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1508A283512AD005E265D /* MainTabView.swift */; };
+		CAD150902835131B005E265D /* StatictisScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1508F2835131B005E265D /* StatictisScreen.swift */; };
+		CAD150952835134E005E265D /* LocationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150942835134E005E265D /* LocationsScreen.swift */; };
+		CAD1509A28351379005E265D /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1509928351379005E265D /* ProfileScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +47,33 @@
 		CAD1503828350C62005E265D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD1503B28350C62005E265D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAD1503D28350C62005E265D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD1504E28350D67005E265D /* Font+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		CAD1504F28350D67005E265D /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
+		CAD1505028350D67005E265D /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		CAD1505128350D67005E265D /* FileManager+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		CAD1505228350D67005E265D /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		CAD1505328350D67005E265D /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CAD1505428350D67005E265D /* LinearGradient+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Extension.swift"; sourceTree = "<group>"; };
+		CAD1505528350D67005E265D /* CLPlacemark+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLPlacemark+Extension.swift"; sourceTree = "<group>"; };
+		CAD1505628350D67005E265D /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		CAD1506228350D90005E265D /* LandingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreen.swift; sourceTree = "<group>"; };
+		CAD1506528350DB0005E265D /* AnimatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedText.swift; sourceTree = "<group>"; };
+		CAD1506928350DF8005E265D /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		CAD1506D28350E29005E265D /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		CAD1507028350EB7005E265D /* TabbarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarItem.swift; sourceTree = "<group>"; };
+		CAD1507328350F3B005E265D /* AppTabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabbarView.swift; sourceTree = "<group>"; };
+		CAD1507428350F3B005E265D /* TabbarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarButton.swift; sourceTree = "<group>"; };
+		CAD1507828350F61005E265D /* TabbarBGShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarBGShape.swift; sourceTree = "<group>"; };
+		CAD1507928350F61005E265D /* Ellipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ellipes.swift; sourceTree = "<group>"; };
+		CAD1507A28350F61005E265D /* CustomRoundedShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRoundedShape.swift; sourceTree = "<group>"; };
+		CAD1507B28350F61005E265D /* TabbarShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarShape.swift; sourceTree = "<group>"; };
+		CAD1507C28350F61005E265D /* NavigationButtonShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationButtonShape.swift; sourceTree = "<group>"; };
+		CAD1508328350FA8005E265D /* NavigationButtonDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationButtonDirection.swift; sourceTree = "<group>"; };
+		CAD1508628351081005E265D /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		CAD1508A283512AD005E265D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		CAD1508F2835131B005E265D /* StatictisScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatictisScreen.swift; sourceTree = "<group>"; };
+		CAD150942835134E005E265D /* LocationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsScreen.swift; sourceTree = "<group>"; };
+		CAD1509928351379005E265D /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +132,12 @@
 		CAD1504428350C92005E265D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1506128350D90005E265D /* LandingScreen */,
+				CAD150892835129B005E265D /* MainTabView */,
+				CAD1506828350DE8005E265D /* Home */,
+				CAD1508E28351309005E265D /* StatictisScreen */,
+				CAD150932835133C005E265D /* LocationsScreen */,
+				CAD1509828351367005E265D /* ProfileScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -85,6 +145,10 @@
 		CAD1504528350C98005E265D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1506528350DB0005E265D /* AnimatedText.swift */,
+				CAD1507328350F3B005E265D /* AppTabbarView.swift */,
+				CAD1507428350F3B005E265D /* TabbarButton.swift */,
+				CAD1508628351081005E265D /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,6 +156,11 @@
 		CAD1504628350C9E005E265D /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1507A28350F61005E265D /* CustomRoundedShape.swift */,
+				CAD1507928350F61005E265D /* Ellipes.swift */,
+				CAD1507C28350F61005E265D /* NavigationButtonShape.swift */,
+				CAD1507828350F61005E265D /* TabbarBGShape.swift */,
+				CAD1507B28350F61005E265D /* TabbarShape.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -106,6 +175,8 @@
 		CAD1504828350CB2005E265D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1508328350FA8005E265D /* NavigationButtonDirection.swift */,
+				CAD1507028350EB7005E265D /* TabbarItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +184,7 @@
 		CAD1504928350CBC005E265D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1506D28350E29005E265D /* MapManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -127,6 +199,15 @@
 		CAD1504B28350CCD005E265D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1505528350D67005E265D /* CLPlacemark+Extension.swift */,
+				CAD1505028350D67005E265D /* Color+Extension.swift */,
+				CAD1505328350D67005E265D /* Date+Extension.swift */,
+				CAD1505228350D67005E265D /* Double+Extension.swift */,
+				CAD1505128350D67005E265D /* FileManager+Extension.swift */,
+				CAD1504E28350D67005E265D /* Font+Extension.swift */,
+				CAD1505628350D67005E265D /* Int+Extension.swift */,
+				CAD1505428350D67005E265D /* LinearGradient+Extension.swift */,
+				CAD1504F28350D67005E265D /* MKCoordinateRegion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,6 +220,54 @@
 				CAD1503828350C62005E265D /* Assets.xcassets */,
 			);
 			path = Resourse;
+			sourceTree = "<group>";
+		};
+		CAD1506128350D90005E265D /* LandingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1506228350D90005E265D /* LandingScreen.swift */,
+			);
+			path = LandingScreen;
+			sourceTree = "<group>";
+		};
+		CAD1506828350DE8005E265D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1506928350DF8005E265D /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CAD150892835129B005E265D /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1508A283512AD005E265D /* MainTabView.swift */,
+			);
+			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		CAD1508E28351309005E265D /* StatictisScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1508F2835131B005E265D /* StatictisScreen.swift */,
+			);
+			path = StatictisScreen;
+			sourceTree = "<group>";
+		};
+		CAD150932835133C005E265D /* LocationsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CAD150942835134E005E265D /* LocationsScreen.swift */,
+			);
+			path = LocationsScreen;
+			sourceTree = "<group>";
+		};
+		CAD1509828351367005E265D /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1509928351379005E265D /* ProfileScreen.swift */,
+			);
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +340,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD1503728350C60005E265D /* ContentView.swift in Sources */,
+				CAD1506E28350E29005E265D /* MapManager.swift in Sources */,
+				CAD1507F28350F61005E265D /* CustomRoundedShape.swift in Sources */,
+				CAD1508028350F61005E265D /* TabbarShape.swift in Sources */,
+				CAD1508128350F61005E265D /* NavigationButtonShape.swift in Sources */,
+				CAD1505928350D67005E265D /* Color+Extension.swift in Sources */,
+				CAD1506A28350DF8005E265D /* HomeScreen.swift in Sources */,
+				CAD1508B283512AD005E265D /* MainTabView.swift in Sources */,
+				CAD150952835134E005E265D /* LocationsScreen.swift in Sources */,
+				CAD1508428350FA8005E265D /* NavigationButtonDirection.swift in Sources */,
+				CAD1507D28350F61005E265D /* TabbarBGShape.swift in Sources */,
+				CAD1505D28350D67005E265D /* LinearGradient+Extension.swift in Sources */,
+				CAD1507628350F3B005E265D /* TabbarButton.swift in Sources */,
+				CAD150902835131B005E265D /* StatictisScreen.swift in Sources */,
+				CAD1505B28350D67005E265D /* Double+Extension.swift in Sources */,
+				CAD1507128350EB7005E265D /* TabbarItem.swift in Sources */,
+				CAD1506628350DB0005E265D /* AnimatedText.swift in Sources */,
 				CAD1503528350C60005E265D /* TurnToTurnApp.swift in Sources */,
+				CAD1508728351081005E265D /* BackgroundView.swift in Sources */,
+				CAD1505F28350D67005E265D /* Int+Extension.swift in Sources */,
+				CAD1505728350D67005E265D /* Font+Extension.swift in Sources */,
+				CAD1506328350D90005E265D /* LandingScreen.swift in Sources */,
+				CAD1507E28350F61005E265D /* Ellipes.swift in Sources */,
+				CAD1505C28350D67005E265D /* Date+Extension.swift in Sources */,
+				CAD1507528350F3B005E265D /* AppTabbarView.swift in Sources */,
+				CAD1509A28351379005E265D /* ProfileScreen.swift in Sources */,
+				CAD1505828350D67005E265D /* MKCoordinateRegion.swift in Sources */,
+				CAD1505A28350D67005E265D /* FileManager+Extension.swift in Sources */,
+				CAD1505E28350D67005E265D /* CLPlacemark+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

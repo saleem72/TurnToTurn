@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var procced: Bool = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if procced {
+            HomeScreen()
+        } else {
+            LandingScreen(procced: $procced)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(MapManager())
     }
 }
