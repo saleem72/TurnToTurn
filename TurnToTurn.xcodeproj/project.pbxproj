@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAA72E8D28361E6E000D3DE6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E8C28361E6E000D3DE6 /* SessionManager.swift */; };
+		CAA72E9728363E45000D3DE6 /* GraphColumnsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9028363E45000D3DE6 /* GraphColumnsChartView.swift */; };
+		CAA72E9828363E45000D3DE6 /* GraphColumnsChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9228363E45000D3DE6 /* GraphColumnsChartItem.swift */; };
+		CAA72E9928363E45000D3DE6 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9428363E45000D3DE6 /* CGFloat+Extension.swift */; };
+		CAA72E9A28363E45000D3DE6 /* GraphColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9628363E45000D3DE6 /* GraphColumnView.swift */; };
+		CAA72E9D28363E67000D3DE6 /* DailyCrossedDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9C28363E67000D3DE6 /* DailyCrossedDistance.swift */; };
+		CAA72EA028363EB4000D3DE6 /* DropDownDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9F28363EB4000D3DE6 /* DropDownDateView.swift */; };
+		CAA72EA428363F14000D3DE6 /* NavigationButtonModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72EA328363F14000D3DE6 /* NavigationButtonModifire.swift */; };
+		CAA72EA728363F67000D3DE6 /* GreedyViewModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72EA628363F67000D3DE6 /* GreedyViewModifire.swift */; };
+		CAA72EAB28363FB5000D3DE6 /* DropdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72EAA28363FB5000D3DE6 /* DropdownList.swift */; };
+		CAA72EAE28363FF8000D3DE6 /* BottomSheetNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72EAD28363FF8000D3DE6 /* BottomSheetNotificationView.swift */; };
 		CAD1503528350C60005E265D /* TurnToTurnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1503428350C60005E265D /* TurnToTurnApp.swift */; };
 		CAD1503728350C60005E265D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1503628350C60005E265D /* ContentView.swift */; };
 		CAD1503928350C62005E265D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD1503828350C62005E265D /* Assets.xcassets */; };
@@ -67,6 +78,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CAA72E8C28361E6E000D3DE6 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		CAA72E9028363E45000D3DE6 /* GraphColumnsChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphColumnsChartView.swift; sourceTree = "<group>"; };
+		CAA72E9228363E45000D3DE6 /* GraphColumnsChartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphColumnsChartItem.swift; sourceTree = "<group>"; };
+		CAA72E9428363E45000D3DE6 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		CAA72E9628363E45000D3DE6 /* GraphColumnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphColumnView.swift; sourceTree = "<group>"; };
+		CAA72E9C28363E67000D3DE6 /* DailyCrossedDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyCrossedDistance.swift; sourceTree = "<group>"; };
+		CAA72E9F28363EB4000D3DE6 /* DropDownDateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownDateView.swift; sourceTree = "<group>"; };
+		CAA72EA328363F14000D3DE6 /* NavigationButtonModifire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationButtonModifire.swift; sourceTree = "<group>"; };
+		CAA72EA628363F67000D3DE6 /* GreedyViewModifire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreedyViewModifire.swift; sourceTree = "<group>"; };
+		CAA72EAA28363FB5000D3DE6 /* DropdownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownList.swift; sourceTree = "<group>"; };
+		CAA72EAD28363FF8000D3DE6 /* BottomSheetNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetNotificationView.swift; sourceTree = "<group>"; };
 		CAD1503128350C60005E265D /* TurnToTurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurnToTurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD1503428350C60005E265D /* TurnToTurnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnToTurnApp.swift; sourceTree = "<group>"; };
 		CAD1503628350C60005E265D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +161,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CAA72E8F28363E45000D3DE6 /* ColumnChart */ = {
+			isa = PBXGroup;
+			children = (
+				CAA72E9328363E45000D3DE6 /* Extensions */,
+				CAA72E9128363E45000D3DE6 /* Models */,
+				CAA72E9528363E45000D3DE6 /* Views */,
+				CAA72E9028363E45000D3DE6 /* GraphColumnsChartView.swift */,
+			);
+			path = ColumnChart;
+			sourceTree = "<group>";
+		};
+		CAA72E9128363E45000D3DE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAA72E9228363E45000D3DE6 /* GraphColumnsChartItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAA72E9328363E45000D3DE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CAA72E9428363E45000D3DE6 /* CGFloat+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAA72E9528363E45000D3DE6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAA72E9628363E45000D3DE6 /* GraphColumnView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAA72EA928363F9C000D3DE6 /* DropdownDateView */ = {
+			isa = PBXGroup;
+			children = (
+				CAA72EAA28363FB5000D3DE6 /* DropdownList.swift */,
+				CAA72E9F28363EB4000D3DE6 /* DropDownDateView.swift */,
+			);
+			path = DropdownDateView;
+			sourceTree = "<group>";
+		};
 		CAD1502828350C60005E265D = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +265,10 @@
 		CAD1504528350C98005E265D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CAA72EA928363F9C000D3DE6 /* DropdownDateView */,
+				CAA72E8F28363E45000D3DE6 /* ColumnChart */,
 				CAD150E5283528CF005E265D /* LoadingView.swift */,
+				CAA72EAD28363FF8000D3DE6 /* BottomSheetNotificationView.swift */,
 				CAD150E22835281B005E265D /* AddNewLocationView.swift */,
 				CAD150DC28351F66005E265D /* DestinationIcon.swift */,
 				CAD150D928351ECB005E265D /* BlurView.swift */,
@@ -238,6 +307,7 @@
 		CAD1504828350CB2005E265D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAA72E9C28363E67000D3DE6 /* DailyCrossedDistance.swift */,
 				CAD150DF28351FFC005E265D /* Location.swift */,
 				CAD1508328350FA8005E265D /* NavigationButtonDirection.swift */,
 				CAD1507028350EB7005E265D /* TabbarItem.swift */,
@@ -251,6 +321,7 @@
 				CAD1506D28350E29005E265D /* MapManager.swift */,
 				CAD150F128352C46005E265D /* MapManagerError.swift */,
 				CAD150EE28352C0F005E265D /* MapRelatedService.swift */,
+				CAA72E8C28361E6E000D3DE6 /* SessionManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -260,6 +331,8 @@
 			children = (
 				CAD150CB28351D93005E265D /* ThickLabelModifire.swift */,
 				CAD150CE28351DCF005E265D /* GradientWithIconButtonModifire.swift */,
+				CAA72EA328363F14000D3DE6 /* NavigationButtonModifire.swift */,
+				CAA72EA628363F67000D3DE6 /* GreedyViewModifire.swift */,
 				CAD150CF28351DCF005E265D /* StrokeWithIconButtonModifire.swift */,
 			);
 			path = Modifires;
@@ -458,9 +531,11 @@
 			files = (
 				CAD1503728350C60005E265D /* ContentView.swift in Sources */,
 				CAD1506E28350E29005E265D /* MapManager.swift in Sources */,
+				CAA72E9928363E45000D3DE6 /* CGFloat+Extension.swift in Sources */,
 				CAD1507F28350F61005E265D /* CustomRoundedShape.swift in Sources */,
 				CAD150F228352C46005E265D /* MapManagerError.swift in Sources */,
 				CAD150D128351DCF005E265D /* StrokeWithIconButtonModifire.swift in Sources */,
+				CAA72EAE28363FF8000D3DE6 /* BottomSheetNotificationView.swift in Sources */,
 				CAD150D428351E75005E265D /* LocationHugeIcon.swift in Sources */,
 				CAD1508028350F61005E265D /* TabbarShape.swift in Sources */,
 				CAD1508128350F61005E265D /* NavigationButtonShape.swift in Sources */,
@@ -468,14 +543,20 @@
 				CAD1505928350D67005E265D /* Color+Extension.swift in Sources */,
 				CAD1506A28350DF8005E265D /* HomeScreen.swift in Sources */,
 				CAD1508B283512AD005E265D /* MainTabView.swift in Sources */,
+				CAA72E9728363E45000D3DE6 /* GraphColumnsChartView.swift in Sources */,
+				CAA72E9828363E45000D3DE6 /* GraphColumnsChartItem.swift in Sources */,
+				CAA72EA028363EB4000D3DE6 /* DropDownDateView.swift in Sources */,
+				CAA72EAB28363FB5000D3DE6 /* DropdownList.swift in Sources */,
 				CAD150952835134E005E265D /* LocationsScreen.swift in Sources */,
 				CAD150DD28351F66005E265D /* DestinationIcon.swift in Sources */,
+				CAA72EA728363F67000D3DE6 /* GreedyViewModifire.swift in Sources */,
 				CAD150C928351D34005E265D /* LocationIcon.swift in Sources */,
 				CAD1508428350FA8005E265D /* NavigationButtonDirection.swift in Sources */,
 				CAD1507D28350F61005E265D /* TabbarBGShape.swift in Sources */,
 				CAD1505D28350D67005E265D /* LinearGradient+Extension.swift in Sources */,
 				CAD150EF28352C0F005E265D /* MapRelatedService.swift in Sources */,
 				CAD1507628350F3B005E265D /* TabbarButton.swift in Sources */,
+				CAA72E8D28361E6E000D3DE6 /* SessionManager.swift in Sources */,
 				CAD150BD28351C58005E265D /* SelectLocationScreen.swift in Sources */,
 				CAD150902835131B005E265D /* StatictisScreen.swift in Sources */,
 				CAD1505B28350D67005E265D /* Double+Extension.swift in Sources */,
@@ -496,13 +577,16 @@
 				CAD150E028351FFC005E265D /* Location.swift in Sources */,
 				CAD150D028351DCF005E265D /* GradientWithIconButtonModifire.swift in Sources */,
 				CAD1505C28350D67005E265D /* Date+Extension.swift in Sources */,
+				CAA72E9A28363E45000D3DE6 /* GraphColumnView.swift in Sources */,
 				CAD1507528350F3B005E265D /* AppTabbarView.swift in Sources */,
 				CAD150C628351D1C005E265D /* UserImageView.swift in Sources */,
 				CAD1509A28351379005E265D /* ProfileScreen.swift in Sources */,
 				CAD1505828350D67005E265D /* MKCoordinateRegion.swift in Sources */,
 				CAD1505A28350D67005E265D /* FileManager+Extension.swift in Sources */,
 				CAD150B5283518C6005E265D /* HomeViewModel.swift in Sources */,
+				CAA72EA428363F14000D3DE6 /* NavigationButtonModifire.swift in Sources */,
 				CAD1505E28350D67005E265D /* CLPlacemark+Extension.swift in Sources */,
+				CAA72E9D28363E67000D3DE6 /* DailyCrossedDistance.swift in Sources */,
 				CAD150E6283528CF005E265D /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

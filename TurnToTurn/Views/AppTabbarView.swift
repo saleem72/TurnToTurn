@@ -71,7 +71,7 @@ extension AppTabbarView {
             .compositingGroup()
         })
         .frame(width: 55.24, height: 73)
-        .offset(y: -53)
+        .offset(y: -43)
     }
     
     private var buttonsLeftSection: some View {

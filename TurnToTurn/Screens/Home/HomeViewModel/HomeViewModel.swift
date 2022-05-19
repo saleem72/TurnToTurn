@@ -13,5 +13,4 @@ class HomeViewModel: ObservableObject {
     
     @Published var gotoMapSelectionDestination: Bool = false
     @Published var gotoMapSelectionSource: Bool = false
-    @Published var gotoMapInstructions: Bool = false
 }

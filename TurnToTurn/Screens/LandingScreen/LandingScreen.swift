@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct LandingScreen: View {
-    @Binding var procced: Bool
+    @ObservedObject private var session: SessionManager
     @State private var animated: Bool = false
+    
+    init(session: SessionManager) {
+        self.session = session
+    }
     
     var body: some View {
         ZStack {
@@ -18,9 +22,8 @@ struct LandingScreen: View {
                 if animated {
                     AnimatedText(text: "Navigator")
                         .onAppear() {
-                            
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                procced = true
+                                session.proccedToHome()
                             }
                         }
                 } else {
@@ -41,7 +44,7 @@ struct LandingScreen: View {
 
 struct LandingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LandingScreen(procced: .constant(false))
+        LandingScreen(session: SessionManager())
     }
 }
 

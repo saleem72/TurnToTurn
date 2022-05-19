@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var procced: Bool = false
+    @StateObject private var session: SessionManager = .init()
+    
     var body: some View {
-        if procced {
-            MainTabView()
-        } else {
-            LandingScreen(procced: $procced)
+        
+        ZStack {
+            switch session.screen {
+            case .home:
+                MainTabView()
+                    .transition(.asymmetric(insertion: .slide, removal: .opacity))
+            case .splash:
+                LandingScreen(session: session)
+                    .transition(.opacity)
+            default:
+                LinearGradient.screen
+                    .edgesIgnoringSafeArea(.all)
+            }
         }
+        .onAppear(perform: session.checkStatus)
     }
 }
 

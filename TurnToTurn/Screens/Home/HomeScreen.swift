@@ -61,7 +61,7 @@ private extension HomeScreen {
             NavigationLink(
                 "",
                 destination: TurnToTurnScreen(),
-                isActive: $viewModel.gotoMapInstructions
+                isActive: $manager.gotoMapInstructions
             )
         }
     }
