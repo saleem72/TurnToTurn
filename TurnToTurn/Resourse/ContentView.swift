@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var procced: Bool = false
     var body: some View {
         if procced {
-            HomeScreen()
+            MainTabView()
         } else {
             LandingScreen(procced: $procced)
         }

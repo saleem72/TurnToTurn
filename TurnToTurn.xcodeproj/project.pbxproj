@@ -38,6 +38,32 @@
 		CAD150902835131B005E265D /* StatictisScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1508F2835131B005E265D /* StatictisScreen.swift */; };
 		CAD150952835134E005E265D /* LocationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150942835134E005E265D /* LocationsScreen.swift */; };
 		CAD1509A28351379005E265D /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1509928351379005E265D /* ProfileScreen.swift */; };
+		CAD150A5283514B4005E265D /* FontsFree-Net-SFProText-Light-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD1509F283514B4005E265D /* FontsFree-Net-SFProText-Light-1.ttf */; };
+		CAD150A6283514B4005E265D /* FontsFree-Net-SFProText-Medium-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD150A0283514B4005E265D /* FontsFree-Net-SFProText-Medium-1.ttf */; };
+		CAD150A7283514B4005E265D /* FontsFree-Net-SFProText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD150A1283514B4005E265D /* FontsFree-Net-SFProText-Regular.ttf */; };
+		CAD150A8283514B4005E265D /* FontsFree-Net-SFProText-Bold-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD150A2283514B4005E265D /* FontsFree-Net-SFProText-Bold-1.ttf */; };
+		CAD150A9283514B4005E265D /* FontsFree-Net-SFProText-Heavy-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD150A3283514B4005E265D /* FontsFree-Net-SFProText-Heavy-1.ttf */; };
+		CAD150AA283514B4005E265D /* FontsFree-Net-SFProText-Semibold-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAD150A4283514B4005E265D /* FontsFree-Net-SFProText-Semibold-1.ttf */; };
+		CAD150AE283514CC005E265D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150AC283514CB005E265D /* Constants.swift */; };
+		CAD150AF283514CC005E265D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD150AD283514CB005E265D /* LaunchScreen.storyboard */; };
+		CAD150B5283518C6005E265D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150B4283518C6005E265D /* HomeViewModel.swift */; };
+		CAD150BD28351C58005E265D /* SelectLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150BC28351C58005E265D /* SelectLocationScreen.swift */; };
+		CAD150C228351C79005E265D /* TurnToTurnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150C128351C79005E265D /* TurnToTurnScreen.swift */; };
+		CAD150C628351D1C005E265D /* UserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150C528351D1C005E265D /* UserImageView.swift */; };
+		CAD150C928351D34005E265D /* LocationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150C828351D34005E265D /* LocationIcon.swift */; };
+		CAD150CC28351D93005E265D /* ThickLabelModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150CB28351D93005E265D /* ThickLabelModifire.swift */; };
+		CAD150D028351DCF005E265D /* GradientWithIconButtonModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150CE28351DCF005E265D /* GradientWithIconButtonModifire.swift */; };
+		CAD150D128351DCF005E265D /* StrokeWithIconButtonModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150CF28351DCF005E265D /* StrokeWithIconButtonModifire.swift */; };
+		CAD150D428351E75005E265D /* LocationHugeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150D328351E75005E265D /* LocationHugeIcon.swift */; };
+		CAD150D728351E82005E265D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150D628351E82005E265D /* ErrorView.swift */; };
+		CAD150DA28351ECB005E265D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150D928351ECB005E265D /* BlurView.swift */; };
+		CAD150DD28351F66005E265D /* DestinationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150DC28351F66005E265D /* DestinationIcon.swift */; };
+		CAD150E028351FFC005E265D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150DF28351FFC005E265D /* Location.swift */; };
+		CAD150E32835281B005E265D /* AddNewLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150E22835281B005E265D /* AddNewLocationView.swift */; };
+		CAD150E6283528CF005E265D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150E5283528CF005E265D /* LoadingView.swift */; };
+		CAD150EB28352918005E265D /* MapCenterIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150EA28352918005E265D /* MapCenterIndicator.swift */; };
+		CAD150EF28352C0F005E265D /* MapRelatedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150EE28352C0F005E265D /* MapRelatedService.swift */; };
+		CAD150F228352C46005E265D /* MapManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD150F128352C46005E265D /* MapManagerError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +100,32 @@
 		CAD1508F2835131B005E265D /* StatictisScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatictisScreen.swift; sourceTree = "<group>"; };
 		CAD150942835134E005E265D /* LocationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsScreen.swift; sourceTree = "<group>"; };
 		CAD1509928351379005E265D /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		CAD1509F283514B4005E265D /* FontsFree-Net-SFProText-Light-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Light-1.ttf"; sourceTree = "<group>"; };
+		CAD150A0283514B4005E265D /* FontsFree-Net-SFProText-Medium-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Medium-1.ttf"; sourceTree = "<group>"; };
+		CAD150A1283514B4005E265D /* FontsFree-Net-SFProText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Regular.ttf"; sourceTree = "<group>"; };
+		CAD150A2283514B4005E265D /* FontsFree-Net-SFProText-Bold-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Bold-1.ttf"; sourceTree = "<group>"; };
+		CAD150A3283514B4005E265D /* FontsFree-Net-SFProText-Heavy-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Heavy-1.ttf"; sourceTree = "<group>"; };
+		CAD150A4283514B4005E265D /* FontsFree-Net-SFProText-Semibold-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-SFProText-Semibold-1.ttf"; sourceTree = "<group>"; };
+		CAD150AC283514CB005E265D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CAD150AD283514CB005E265D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAD150B4283518C6005E265D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CAD150BC28351C58005E265D /* SelectLocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationScreen.swift; sourceTree = "<group>"; };
+		CAD150C128351C79005E265D /* TurnToTurnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnToTurnScreen.swift; sourceTree = "<group>"; };
+		CAD150C528351D1C005E265D /* UserImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageView.swift; sourceTree = "<group>"; };
+		CAD150C828351D34005E265D /* LocationIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationIcon.swift; sourceTree = "<group>"; };
+		CAD150CB28351D93005E265D /* ThickLabelModifire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThickLabelModifire.swift; sourceTree = "<group>"; };
+		CAD150CE28351DCF005E265D /* GradientWithIconButtonModifire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientWithIconButtonModifire.swift; sourceTree = "<group>"; };
+		CAD150CF28351DCF005E265D /* StrokeWithIconButtonModifire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeWithIconButtonModifire.swift; sourceTree = "<group>"; };
+		CAD150D328351E75005E265D /* LocationHugeIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHugeIcon.swift; sourceTree = "<group>"; };
+		CAD150D628351E82005E265D /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		CAD150D928351ECB005E265D /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		CAD150DC28351F66005E265D /* DestinationIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationIcon.swift; sourceTree = "<group>"; };
+		CAD150DF28351FFC005E265D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CAD150E22835281B005E265D /* AddNewLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewLocationView.swift; sourceTree = "<group>"; };
+		CAD150E5283528CF005E265D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CAD150EA28352918005E265D /* MapCenterIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCenterIndicator.swift; sourceTree = "<group>"; };
+		CAD150EE28352C0F005E265D /* MapRelatedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRelatedService.swift; sourceTree = "<group>"; };
+		CAD150F128352C46005E265D /* MapManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManagerError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +184,8 @@
 		CAD1504428350C92005E265D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CAD150C028351C68005E265D /* TurnToTurnScreen */,
+				CAD150BB28351C4C005E265D /* SelectLocationScreen */,
 				CAD1506128350D90005E265D /* LandingScreen */,
 				CAD150892835129B005E265D /* MainTabView */,
 				CAD1506828350DE8005E265D /* Home */,
@@ -145,10 +199,19 @@
 		CAD1504528350C98005E265D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CAD150E5283528CF005E265D /* LoadingView.swift */,
+				CAD150E22835281B005E265D /* AddNewLocationView.swift */,
+				CAD150DC28351F66005E265D /* DestinationIcon.swift */,
+				CAD150D928351ECB005E265D /* BlurView.swift */,
+				CAD150D628351E82005E265D /* ErrorView.swift */,
+				CAD150C528351D1C005E265D /* UserImageView.swift */,
+				CAD150C828351D34005E265D /* LocationIcon.swift */,
+				CAD150D328351E75005E265D /* LocationHugeIcon.swift */,
 				CAD1506528350DB0005E265D /* AnimatedText.swift */,
 				CAD1507328350F3B005E265D /* AppTabbarView.swift */,
 				CAD1507428350F3B005E265D /* TabbarButton.swift */,
 				CAD1508628351081005E265D /* BackgroundView.swift */,
+				CAD150EA28352918005E265D /* MapCenterIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +238,7 @@
 		CAD1504828350CB2005E265D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAD150DF28351FFC005E265D /* Location.swift */,
 				CAD1508328350FA8005E265D /* NavigationButtonDirection.swift */,
 				CAD1507028350EB7005E265D /* TabbarItem.swift */,
 			);
@@ -185,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				CAD1506D28350E29005E265D /* MapManager.swift */,
+				CAD150F128352C46005E265D /* MapManagerError.swift */,
+				CAD150EE28352C0F005E265D /* MapRelatedService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,6 +258,9 @@
 		CAD1504A28350CC5005E265D /* Modifires */ = {
 			isa = PBXGroup;
 			children = (
+				CAD150CB28351D93005E265D /* ThickLabelModifire.swift */,
+				CAD150CE28351DCF005E265D /* GradientWithIconButtonModifire.swift */,
+				CAD150CF28351DCF005E265D /* StrokeWithIconButtonModifire.swift */,
 			);
 			path = Modifires;
 			sourceTree = "<group>";
@@ -215,9 +284,12 @@
 		CAD1504C28350CD5005E265D /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1509E283514B4005E265D /* Fonts */,
+				CAD1503828350C62005E265D /* Assets.xcassets */,
 				CAD1503428350C60005E265D /* TurnToTurnApp.swift */,
 				CAD1503628350C60005E265D /* ContentView.swift */,
-				CAD1503828350C62005E265D /* Assets.xcassets */,
+				CAD150AC283514CB005E265D /* Constants.swift */,
+				CAD150AD283514CB005E265D /* LaunchScreen.storyboard */,
 			);
 			path = Resourse;
 			sourceTree = "<group>";
@@ -233,6 +305,7 @@
 		CAD1506828350DE8005E265D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CAD150B3283518B7005E265D /* HomeViewModel */,
 				CAD1506928350DF8005E265D /* HomeScreen.swift */,
 			);
 			path = Home;
@@ -268,6 +341,43 @@
 				CAD1509928351379005E265D /* ProfileScreen.swift */,
 			);
 			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		CAD1509E283514B4005E265D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1509F283514B4005E265D /* FontsFree-Net-SFProText-Light-1.ttf */,
+				CAD150A0283514B4005E265D /* FontsFree-Net-SFProText-Medium-1.ttf */,
+				CAD150A1283514B4005E265D /* FontsFree-Net-SFProText-Regular.ttf */,
+				CAD150A2283514B4005E265D /* FontsFree-Net-SFProText-Bold-1.ttf */,
+				CAD150A3283514B4005E265D /* FontsFree-Net-SFProText-Heavy-1.ttf */,
+				CAD150A4283514B4005E265D /* FontsFree-Net-SFProText-Semibold-1.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CAD150B3283518B7005E265D /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CAD150B4283518C6005E265D /* HomeViewModel.swift */,
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
+		CAD150BB28351C4C005E265D /* SelectLocationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CAD150BC28351C58005E265D /* SelectLocationScreen.swift */,
+			);
+			path = SelectLocationScreen;
+			sourceTree = "<group>";
+		};
+		CAD150C028351C68005E265D /* TurnToTurnScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CAD150C128351C79005E265D /* TurnToTurnScreen.swift */,
+			);
+			path = TurnToTurnScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +437,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD150AF283514CC005E265D /* LaunchScreen.storyboard in Resources */,
+				CAD150AA283514B4005E265D /* FontsFree-Net-SFProText-Semibold-1.ttf in Resources */,
+				CAD150A6283514B4005E265D /* FontsFree-Net-SFProText-Medium-1.ttf in Resources */,
+				CAD150A7283514B4005E265D /* FontsFree-Net-SFProText-Regular.ttf in Resources */,
+				CAD150A8283514B4005E265D /* FontsFree-Net-SFProText-Bold-1.ttf in Resources */,
 				CAD1503C28350C62005E265D /* Preview Assets.xcassets in Resources */,
+				CAD150A9283514B4005E265D /* FontsFree-Net-SFProText-Heavy-1.ttf in Resources */,
 				CAD1503928350C62005E265D /* Assets.xcassets in Resources */,
+				CAD150A5283514B4005E265D /* FontsFree-Net-SFProText-Light-1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,32 +459,51 @@
 				CAD1503728350C60005E265D /* ContentView.swift in Sources */,
 				CAD1506E28350E29005E265D /* MapManager.swift in Sources */,
 				CAD1507F28350F61005E265D /* CustomRoundedShape.swift in Sources */,
+				CAD150F228352C46005E265D /* MapManagerError.swift in Sources */,
+				CAD150D128351DCF005E265D /* StrokeWithIconButtonModifire.swift in Sources */,
+				CAD150D428351E75005E265D /* LocationHugeIcon.swift in Sources */,
 				CAD1508028350F61005E265D /* TabbarShape.swift in Sources */,
 				CAD1508128350F61005E265D /* NavigationButtonShape.swift in Sources */,
+				CAD150AE283514CC005E265D /* Constants.swift in Sources */,
 				CAD1505928350D67005E265D /* Color+Extension.swift in Sources */,
 				CAD1506A28350DF8005E265D /* HomeScreen.swift in Sources */,
 				CAD1508B283512AD005E265D /* MainTabView.swift in Sources */,
 				CAD150952835134E005E265D /* LocationsScreen.swift in Sources */,
+				CAD150DD28351F66005E265D /* DestinationIcon.swift in Sources */,
+				CAD150C928351D34005E265D /* LocationIcon.swift in Sources */,
 				CAD1508428350FA8005E265D /* NavigationButtonDirection.swift in Sources */,
 				CAD1507D28350F61005E265D /* TabbarBGShape.swift in Sources */,
 				CAD1505D28350D67005E265D /* LinearGradient+Extension.swift in Sources */,
+				CAD150EF28352C0F005E265D /* MapRelatedService.swift in Sources */,
 				CAD1507628350F3B005E265D /* TabbarButton.swift in Sources */,
+				CAD150BD28351C58005E265D /* SelectLocationScreen.swift in Sources */,
 				CAD150902835131B005E265D /* StatictisScreen.swift in Sources */,
 				CAD1505B28350D67005E265D /* Double+Extension.swift in Sources */,
 				CAD1507128350EB7005E265D /* TabbarItem.swift in Sources */,
+				CAD150D728351E82005E265D /* ErrorView.swift in Sources */,
 				CAD1506628350DB0005E265D /* AnimatedText.swift in Sources */,
+				CAD150C228351C79005E265D /* TurnToTurnScreen.swift in Sources */,
 				CAD1503528350C60005E265D /* TurnToTurnApp.swift in Sources */,
 				CAD1508728351081005E265D /* BackgroundView.swift in Sources */,
+				CAD150E32835281B005E265D /* AddNewLocationView.swift in Sources */,
 				CAD1505F28350D67005E265D /* Int+Extension.swift in Sources */,
+				CAD150EB28352918005E265D /* MapCenterIndicator.swift in Sources */,
 				CAD1505728350D67005E265D /* Font+Extension.swift in Sources */,
+				CAD150DA28351ECB005E265D /* BlurView.swift in Sources */,
 				CAD1506328350D90005E265D /* LandingScreen.swift in Sources */,
 				CAD1507E28350F61005E265D /* Ellipes.swift in Sources */,
+				CAD150CC28351D93005E265D /* ThickLabelModifire.swift in Sources */,
+				CAD150E028351FFC005E265D /* Location.swift in Sources */,
+				CAD150D028351DCF005E265D /* GradientWithIconButtonModifire.swift in Sources */,
 				CAD1505C28350D67005E265D /* Date+Extension.swift in Sources */,
 				CAD1507528350F3B005E265D /* AppTabbarView.swift in Sources */,
+				CAD150C628351D1C005E265D /* UserImageView.swift in Sources */,
 				CAD1509A28351379005E265D /* ProfileScreen.swift in Sources */,
 				CAD1505828350D67005E265D /* MKCoordinateRegion.swift in Sources */,
 				CAD1505A28350D67005E265D /* FileManager+Extension.swift in Sources */,
+				CAD150B5283518C6005E265D /* HomeViewModel.swift in Sources */,
 				CAD1505E28350D67005E265D /* CLPlacemark+Extension.swift in Sources */,
+				CAD150E6283528CF005E265D /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

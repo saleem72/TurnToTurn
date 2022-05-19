@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct TurnToTurnApp: App {
+    
+    @StateObject private var manager = MapManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(manager)
         }
     }
 }
