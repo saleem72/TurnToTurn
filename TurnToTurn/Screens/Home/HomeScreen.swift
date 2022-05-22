@@ -119,7 +119,7 @@ private extension HomeScreen {
     
     private var selectSourceText: some View {
         Group {
-            if let location = manager.sourceLocation {
+            if let location = manager.choosenLocation {
                 Text(location.name)
             } else if let _ = manager.userLocation {
                 Text("Current Location")

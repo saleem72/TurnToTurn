@@ -21,7 +21,7 @@ class MapManager: NSObject, ObservableObject {
     @Published var userLocation: Location? = nil
     
     @Published var isTripReady: Bool = false
-    @Published var sourceLocation: Location?
+    @Published var choosenLocation: Location?
     @Published var destinationLocation: Location?
     
     @Published var regin: MKCoordinateRegion = .init()
@@ -35,6 +35,22 @@ class MapManager: NSObject, ObservableObject {
     @Published var instructionError: MapManagerError? = nil
     
     @Published var selectedRoute: MKRoute? = nil
+    @Published var directions: [MapStep] = []
+    @Published var topStepIndex: Int? = nil
+    @Published var pins: [CustomMapPin] = []
+    @Published var tripDetails: TripDetails? = nil
+    
+    
+    var sourceLocation: Location? {
+        choosenLocation != nil ? choosenLocation : userLocation
+    }
+    var sourceRegin: MKCoordinateRegion? {
+        if let source = sourceLocation {
+            return MKCoordinateRegion(center: source.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
+        } else {
+            return nil
+        }
+    }
     
     lazy private var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -44,6 +60,7 @@ class MapManager: NSObject, ObservableObject {
     }()
     
     private var mapService = MapRelatedService()
+    private let synth = AVSpeechSynthesizer()
     
 }
 
@@ -66,7 +83,7 @@ extension MapManager {
     func setLocation(coordinates: CLLocationCoordinate2D, addTo: AddedLocation) {
         switch addTo {
         case .source:
-            sourceLocation = Location(name: "Source", city: "", address: "", description: "", createdAt: "", latitude: coordinates.latitude, longitude: coordinates.longitude)
+            choosenLocation = Location(name: "Source", city: "", address: "", description: "", createdAt: "", latitude: coordinates.latitude, longitude: coordinates.longitude)
         case .destination:
             destinationLocation = Location(name: "Destination", city: "", address: "", description: "", createdAt: "", latitude: coordinates.latitude, longitude: coordinates.longitude)
         }
@@ -76,15 +93,14 @@ extension MapManager {
     func add(location: Location, addTo: MapManager.AddedLocation) {
         //TODO: Find way to save this location for later (file, core data)
         switch addTo {
-        case .source: sourceLocation = location
+        case .source: choosenLocation = location
         case .destination: destinationLocation = location
         }
         updateTripEntries()
     }
     
     private func updateTripEntries() {
-        let hasSource = sourceLocation != nil || userLocation != nil
-        isTripReady = hasSource && destinationLocation != nil
+        isTripReady = sourceLocation != nil && destinationLocation != nil
     }
 }
 
@@ -145,13 +161,58 @@ extension MapManager: CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print(#function)
+        guard directions.count > 0 else { return }
+        
+        // Real deal
+        /*
+        if let idx = directions.firstIndex(where: {$0.coordinate == regin.center}) {
+            topStepIndex = idx
+            synth.speak(directions[topStepIndex].voice)
+            if idx == directions.indices.last {
+                //MARK: Trip has ended
+                endTrip()
+            }
+        }
+        */
+        
+        // For test
+        if var topStepIndex = topStepIndex {
+            topStepIndex += 1
+            synth.speak(directions[topStepIndex].voice)
+            self.topStepIndex = topStepIndex
+            if topStepIndex == directions.indices.last {
+                //MARK: Trip has ended
+                endTrip()
+            }
+        }
+        
+    }
+    
     private func updateUserLocation(for location: CLLocation) {
         userLocation = Location(name: "Current Location", city: "", address: "", description: "", createdAt: "", latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     }
     
+    func removeAllMonitoredRegins() {
+        locationManager.monitoredRegions.forEach { regin in
+            locationManager.stopMonitoring(for: regin)
+        }
+    }
+    
+    func startMonitoring(for regin: CLRegion) {
+        locationManager.startMonitoring(for: regin)
+    }
 }
 
 extension MapManager {
+    
+    var tripLocations: [Location] {
+       
+        guard let sourceLocation = sourceLocation, let destination = destinationLocation else {return []}
+        return [sourceLocation, destination]
+    }
+    
     private func fetchRoute(source: Location, destination: Location) {
         isInstructionLoading = true
         mapService.requestRoute(source: source.coordinates, destination: destination.coordinates) { [weak self] result in
@@ -161,6 +222,10 @@ extension MapManager {
             switch result {
             case .success(let route): // (coordinate: source)
                 self.selectedRoute = route
+                self.directions = route.steps.filter({!$0.instructions.isEmpty}).map(MapStep.init)
+                if route.steps.count > 1 {
+                    self.topStepIndex = 0
+                }
             case .failure(let error):
                 self.instructionError = error
             }
@@ -169,12 +234,38 @@ extension MapManager {
     }
     
     func calculateRoute() {
-        let source = sourceLocation != nil ? sourceLocation : userLocation
-        guard let sourceLocation = source, let destination = destinationLocation else { return }
+        
+        guard let sourceLocation = sourceLocation, let destination = destinationLocation else { return }
         
         fetchRoute(source: sourceLocation, destination: destination)
-        
+        pins = [
+            .init(coordinate: sourceLocation.coordinates, title: "Source"),
+            .init(coordinate: destination.coordinates, title: "Destination")
+        ]
         
         gotoMapInstructions = true
     }
+    
+    private func endTrip() {
+        let message = "You reached your destination"
+        synth.speak(message)
+        DispatchQueue.main.async { [weak self] in
+            self?.selectedRoute = nil
+            self?.pins.removeAll()
+            self?.directions.removeAll()
+        }
+    }
 }
+
+//MARK: - Turn by Turn Map
+extension MapManager {
+    func tellFirstStep() {
+        guard let string = directions.first?.voice else { return }
+        synth.speak(string)
+    }
+}
+
+
+
+
+
