@@ -77,7 +77,9 @@ private extension HomeScreen {
             
             VStack {
                 locationBar
+                    .zIndex(4)
                 destinationBar
+                    .zIndex(2)
                 tripActionButtons
                     .padding(.top)
             }
@@ -134,10 +136,21 @@ private extension HomeScreen {
         HStack {
             LocationIcon()
                 .frame(width: 44, height: 44)
-            selectSourceText
+//            selectSourceText
+            
+            AddressAutoCompleterView(
+                regin: manager.userRegin,
+                label: "Not set yet"
+            ) { location in
+                manager.updateSourceAddress(for: location)
+                hideKeyboard()
+            }
             selectSourceButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .onChange(of: viewModel.isSourceBusy, perform: { value in
+            print("New Status: \(value)")
+        })
     }
     
     private var selectDestinationText: some View {
@@ -166,9 +179,36 @@ private extension HomeScreen {
         HStack {
             DestinationIcon()
                 .frame(width: 44, height: 44)
-            selectDestinationText
+//            selectDestinationText
+            
+            AddressAutoCompleterView(
+                regin: manager.userRegin,
+                label: "Not set yet"
+            ) { location in
+                manager.updateDestinationAddress(for: location)
+                hideKeyboard()
+            }
+            
             selectDestinationButton
         }
+    }
+    
+    @ViewBuilder
+    private func sourceLabel() -> some View {
+        VStack {
+            
+        }
+    }
+    
+    @ViewBuilder
+    private func destinationLabel() -> some View {
+        Group {
+            if !viewModel.isDestinationBusy {
+                Text("Destination Label")
+                    .padding(.leading)
+            }
+        }
+        .allowsTightening(false)
     }
     
     private var stepsButton: some View {

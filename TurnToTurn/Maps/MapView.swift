@@ -96,8 +96,8 @@ private extension MapView {
         guard let route = manager.selectedRoute else { return }
         if let regin = findRegin(mapView: mapView) {
             mapView.setRegion(regin, animated: true)
-        } else if let regin = manager.sourceRegin {
-            mapView.setRegion(regin, animated: true)
+        } else  {
+            mapView.setRegion(manager.sourceRegin, animated: true)
         }
         mapView.addOverlay(route.polyline)
         

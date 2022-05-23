@@ -29,7 +29,7 @@ struct SelectLocationScreen: View {
                 VStack {
                     header
                     
-                    Map(coordinateRegion: $manager.regin, showsUserLocation: true)
+                    Map(coordinateRegion: addTo == .source ? $manager.sourceRegin : $manager.destinationRegin, showsUserLocation: true)
                         .edgesIgnoringSafeArea(.all)
                         .overlay(centerIndicator)
                         .onAppear {

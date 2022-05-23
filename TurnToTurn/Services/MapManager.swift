@@ -19,6 +19,7 @@ class MapManager: NSObject, ObservableObject {
     
     @Published var locationError: MapManagerError? = nil
     @Published var userLocation: Location? = nil
+    @Published var userRegin: MKCoordinateRegion = .init()
     
     @Published var isTripReady: Bool = false
     @Published var choosenLocation: Location?
@@ -44,11 +45,33 @@ class MapManager: NSObject, ObservableObject {
     var sourceLocation: Location? {
         choosenLocation != nil ? choosenLocation : userLocation
     }
-    var sourceRegin: MKCoordinateRegion? {
-        if let source = sourceLocation {
-            return MKCoordinateRegion(center: source.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
-        } else {
-            return nil
+    
+    var sourceRegin: MKCoordinateRegion {
+        get {
+            if let source = sourceLocation {
+                return MKCoordinateRegion(center: source.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
+            } else {
+                return MKCoordinateRegion()
+            }
+        }
+        
+        set {
+            
+        }
+    }
+    
+    var destinationRegin: MKCoordinateRegion {
+        get {
+            if let destination = destinationLocation {
+                return MKCoordinateRegion(center: destination.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
+            } else if let location = userLocation {
+                return MKCoordinateRegion(center: location.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
+            } else {
+                return MKCoordinateRegion()
+            }
+        }
+        set {
+            
         }
     }
     
@@ -192,6 +215,7 @@ extension MapManager: CLLocationManagerDelegate {
     
     private func updateUserLocation(for location: CLLocation) {
         userLocation = Location(name: "Current Location", city: "", address: "", description: "", createdAt: "", latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        userRegin = .init(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
     }
     
     func removeAllMonitoredRegins() {
@@ -202,6 +226,49 @@ extension MapManager: CLLocationManagerDelegate {
     
     func startMonitoring(for regin: CLRegion) {
         locationManager.startMonitoring(for: regin)
+    }
+    
+    func getCoordinates(for location: MKLocalSearchCompletion, complition: @escaping (MKMapItem?) -> Void) {
+        let searchRequest = MKLocalSearch.Request(completion: location)
+        let searcher = MKLocalSearch(request: searchRequest)
+        searcher.start { (response, error) in
+            guard error == nil else {
+                debug("Error retriving coordinates: \(error!.localizedDescription)")
+                complition(nil)
+                return
+            }
+            guard let response = response else {
+                complition(nil)
+                return
+            }
+            
+            guard let mapItem = response.mapItems.first else { return }
+            complition(mapItem)
+            
+        }
+    }
+    
+    func updateSourceAddress(for location: MKLocalSearchCompletion) {
+        
+        getCoordinates(for: location) { [weak self]  mapItem in
+            guard let placemark = mapItem?.placemark else { return }
+            DispatchQueue.main.async {
+                self?.choosenLocation = Location(name: location.title, city: "", address: location.title + ", " + location.subtitle, description: "", createdAt: "", latitude: placemark.coordinate.latitude, longitude: placemark.coordinate.longitude)
+                
+                self?.updateTripEntries()
+            }
+        }
+    }
+    
+    func updateDestinationAddress(for location: MKLocalSearchCompletion) {
+        getCoordinates(for: location) { [weak self]  mapItem in
+            guard let placemark = mapItem?.placemark else { return }
+            DispatchQueue.main.async {
+                self?.destinationLocation = Location(name: location.title, city: "", address: location.title + ", " + location.subtitle, description: "", createdAt: "", latitude: placemark.coordinate.latitude, longitude: placemark.coordinate.longitude)
+                
+                self?.updateTripEntries()
+            }
+        }
     }
 }
 
@@ -239,8 +306,8 @@ extension MapManager {
         
         fetchRoute(source: sourceLocation, destination: destination)
         pins = [
-            .init(coordinate: sourceLocation.coordinates, title: "Source"),
-            .init(coordinate: destination.coordinates, title: "Destination")
+            .init(coordinate: sourceLocation.coordinates, title: sourceLocation.name),
+            .init(coordinate: destination.coordinates, title: destination.name)
         ]
         
         gotoMapInstructions = true

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 class HomeViewModel: ObservableObject {
     @Published var showDestinationList: Bool = false
@@ -13,4 +14,8 @@ class HomeViewModel: ObservableObject {
     
     @Published var gotoMapSelectionDestination: Bool = false
     @Published var gotoMapSelectionSource: Bool = false
+    
+    @Published var isSourceBusy: Bool = false
+    @Published var isDestinationBusy: Bool = false
+    
 }

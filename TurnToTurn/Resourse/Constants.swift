@@ -15,3 +15,10 @@ enum Constants {
     static var routeSpan = MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
     static var reginRadius: Double = 500
 }
+
+func debug(_ values: String...) {
+    #if DEBUG
+    let value = values.joined(separator: ",\t")
+    print(value)
+    #endif
+}

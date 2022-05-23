@@ -100,6 +100,10 @@ extension Color {
         var blue: Color {
             Color("blue")
         }
+        
+        var bk: Color {
+            Color("bk")
+        }
     }
 
     static let palette = Palette(name: "main")
