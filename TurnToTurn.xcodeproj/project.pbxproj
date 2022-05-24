@@ -15,6 +15,9 @@
 		CA6F3AC4283BB0A600202589 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F3AC3283BB0A600202589 /* View+Extension.swift */; };
 		CA6F3ACA283BC02D00202589 /* TurnToTurnDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA6F3AC8283BC02D00202589 /* TurnToTurnDataModel.xcdatamodeld */; };
 		CA6F3ACD283BC11600202589 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F3ACC283BC11600202589 /* CoreDataManager.swift */; };
+		CA6F3AD5283CEDBA00202589 /* LocationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F3AD4283CEDBA00202589 /* LocationCard.swift */; };
+		CA6F3AD8283CEDE900202589 /* SplitedHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F3AD7283CEDE900202589 /* SplitedHStack.swift */; };
+		CA6F3ADC283CEE2E00202589 /* NavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F3ADB283CEE2E00202589 /* NavHeaderView.swift */; };
 		CAA72E8D28361E6E000D3DE6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E8C28361E6E000D3DE6 /* SessionManager.swift */; };
 		CAA72E9728363E45000D3DE6 /* GraphColumnsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9028363E45000D3DE6 /* GraphColumnsChartView.swift */; };
 		CAA72E9828363E45000D3DE6 /* GraphColumnsChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA72E9228363E45000D3DE6 /* GraphColumnsChartItem.swift */; };
@@ -107,6 +110,9 @@
 		CA6F3AC3283BB0A600202589 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		CA6F3AC9283BC02D00202589 /* TurnToTurnDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TurnToTurnDataModel.xcdatamodel; sourceTree = "<group>"; };
 		CA6F3ACC283BC11600202589 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CA6F3AD4283CEDBA00202589 /* LocationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCard.swift; sourceTree = "<group>"; };
+		CA6F3AD7283CEDE900202589 /* SplitedHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitedHStack.swift; sourceTree = "<group>"; };
+		CA6F3ADB283CEE2E00202589 /* NavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHeaderView.swift; sourceTree = "<group>"; };
 		CAA72E8C28361E6E000D3DE6 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		CAA72E9028363E45000D3DE6 /* GraphColumnsChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphColumnsChartView.swift; sourceTree = "<group>"; };
 		CAA72E9228363E45000D3DE6 /* GraphColumnsChartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphColumnsChartItem.swift; sourceTree = "<group>"; };
@@ -326,6 +332,7 @@
 		CAD1504528350C98005E265D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA6F3ABC283B9CB800202589 /* AddressAutoCompleter */,
 				CAA72EA928363F9C000D3DE6 /* DropdownDateView */,
 				CAA72E8F28363E45000D3DE6 /* ColumnChart */,
 				CAD150E5283528CF005E265D /* LoadingView.swift */,
@@ -346,7 +353,9 @@
 				CAD1507428350F3B005E265D /* TabbarButton.swift */,
 				CAD1508628351081005E265D /* BackgroundView.swift */,
 				CAD150EA28352918005E265D /* MapCenterIndicator.swift */,
-				CA6F3ABC283B9CB800202589 /* AddressAutoCompleter */,
+				CA6F3AD4283CEDBA00202589 /* LocationCard.swift */,
+				CA6F3AD7283CEDE900202589 /* SplitedHStack.swift */,
+				CA6F3ADB283CEE2E00202589 /* NavHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -657,6 +666,7 @@
 				CAD1506628350DB0005E265D /* AnimatedText.swift in Sources */,
 				CAD150C228351C79005E265D /* TurnToTurnScreen.swift in Sources */,
 				CAD1503528350C60005E265D /* TurnToTurnApp.swift in Sources */,
+				CA6F3AD8283CEDE900202589 /* SplitedHStack.swift in Sources */,
 				CAD1508728351081005E265D /* BackgroundView.swift in Sources */,
 				CAA72EBC28366373000D3DE6 /* TripDetails.swift in Sources */,
 				CAD150E32835281B005E265D /* AddNewLocationView.swift in Sources */,
@@ -666,12 +676,14 @@
 				CAD150DA28351ECB005E265D /* BlurView.swift in Sources */,
 				CAD1506328350D90005E265D /* LandingScreen.swift in Sources */,
 				CAD1507E28350F61005E265D /* Ellipes.swift in Sources */,
+				CA6F3AD5283CEDBA00202589 /* LocationCard.swift in Sources */,
 				CAD150CC28351D93005E265D /* ThickLabelModifire.swift in Sources */,
 				CA6F3ABF283B9CDE00202589 /* AddressCompleter.swift in Sources */,
 				CAD150E028351FFC005E265D /* Location.swift in Sources */,
 				CA6F3A53283A1B9300202589 /* MapStep.swift in Sources */,
 				CAA72ECB28366759000D3DE6 /* LocationMarker.swift in Sources */,
 				CAA72EC228366498000D3DE6 /* DirectionsStepsView.swift in Sources */,
+				CA6F3ADC283CEE2E00202589 /* NavHeaderView.swift in Sources */,
 				CAD150D028351DCF005E265D /* GradientWithIconButtonModifire.swift in Sources */,
 				CAD1505C28350D67005E265D /* Date+Extension.swift in Sources */,
 				CAA72E9A28363E45000D3DE6 /* GraphColumnView.swift in Sources */,

@@ -18,14 +18,9 @@ class MapManager: NSObject, ObservableObject {
     }
     
     @Published var locationError: MapManagerError? = nil
-    @Published var userLocation: Location? = nil
-    @Published var userRegin: MKCoordinateRegion = .init()
     
     @Published var isTripReady: Bool = false
-    @Published var choosenLocation: Location?
-    @Published var destinationLocation: Location?
     
-    @Published var regin: MKCoordinateRegion = .init()
     @Published var requestionGeoAddressError: MapManagerError?
     @Published var locationToAdd: Location? = nil
     @Published var busyRequestionGeoAddress: Bool = false
@@ -46,34 +41,34 @@ class MapManager: NSObject, ObservableObject {
         choosenLocation != nil ? choosenLocation : userLocation
     }
     
-    var sourceRegin: MKCoordinateRegion {
-        get {
-            if let source = sourceLocation {
-                return MKCoordinateRegion(center: source.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
-            } else {
-                return MKCoordinateRegion()
+    @Published var userLocation: Location? = nil {
+        didSet {
+            if let value = userLocation {
+                userRegin = MKCoordinateRegion(center: value.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
+                
+                sourceRegin = MKCoordinateRegion(center: value.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
             }
         }
-        
-        set {
-            
+    }
+    @Published var choosenLocation: Location? {
+        didSet {
+            if let value = choosenLocation {
+                sourceRegin = MKCoordinateRegion(center: value.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
+            }
+        }
+    }
+    @Published var destinationLocation: Location? {
+        didSet {
+            if let value = destinationLocation {
+                destinationRegin = MKCoordinateRegion(center: value.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
+            }
         }
     }
     
-    var destinationRegin: MKCoordinateRegion {
-        get {
-            if let destination = destinationLocation {
-                return MKCoordinateRegion(center: destination.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
-            } else if let location = userLocation {
-                return MKCoordinateRegion(center: location.coordinates, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
-            } else {
-                return MKCoordinateRegion()
-            }
-        }
-        set {
-            
-        }
-    }
+    
+    @Published var userRegin: MKCoordinateRegion = .init()
+    @Published var sourceRegin: MKCoordinateRegion = MKCoordinateRegion()
+    @Published var destinationRegin: MKCoordinateRegion = MKCoordinateRegion()
     
     lazy private var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -82,8 +77,24 @@ class MapManager: NSObject, ObservableObject {
         return manager
     }()
     
+    var userMarks: [LocationEntity] {
+        dataManger.locations
+        
+//        dataManger.locations.map({
+//            Location(
+//                name: $0.name ?? "",
+//                city: "",
+//                address: $0.address ?? "",
+//                description: $0.details ?? "",
+//                createdAt: "",
+//                latitude: $0.latitude,
+//                longitude: $0.longitude)
+//        })
+    }
+    
     private var mapService = MapRelatedService()
     private let synth = AVSpeechSynthesizer()
+    private var dataManger: CoreDataManager = .shared
     
 }
 
@@ -115,6 +126,9 @@ extension MapManager {
     
     func add(location: Location, addTo: MapManager.AddedLocation) {
         //TODO: Find way to save this location for later (file, core data)
+        
+        dataManger.addLocation(location)
+        
         switch addTo {
         case .source: choosenLocation = location
         case .destination: destinationLocation = location
@@ -178,9 +192,6 @@ extension MapManager: CLLocationManagerDelegate {
             }
         } else {
             updateUserLocation(for: location)
-            withAnimation() {
-                regin = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: Constants.reginRadius, longitudinalMeters: Constants.reginRadius)
-            }
         }
     }
     

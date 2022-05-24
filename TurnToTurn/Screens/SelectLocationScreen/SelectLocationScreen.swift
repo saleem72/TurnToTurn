@@ -13,7 +13,8 @@ struct SelectLocationScreen: View {
     @EnvironmentObject private var manager: MapManager
     @State private var showConfirmationMessage: Bool = false
     
-    let addTo: MapManager.AddedLocation
+    private let addTo: MapManager.AddedLocation
+    
     
     init(addTo: MapManager.AddedLocation) {
         self.addTo = addTo
@@ -21,46 +22,19 @@ struct SelectLocationScreen: View {
     
     var body: some View {
         ZStack {
-            
-            LinearGradient.screen
-                .edgesIgnoringSafeArea(.all)
-            
-            ZStack {
-                VStack {
-                    header
-                    
-                    Map(coordinateRegion: addTo == .source ? $manager.sourceRegin : $manager.destinationRegin, showsUserLocation: true)
-                        .edgesIgnoringSafeArea(.all)
-                        .overlay(centerIndicator)
-                        .onAppear {
-//                            MKMapView.appearance().pointOfInterestFilter = .excludingAll
-                            MKMapView.appearance().userTrackingMode = .followWithHeading
-                        }
-                }
-                
-                if manager.busyRequestionGeoAddress {
-                    LoadingView()
-                }
-                
-                if let _ = manager.requestionGeoAddressError {
-                    ErrorView(error: $manager.requestionGeoAddressError)
-                }
-            }
+            BackgroundView()
+            content
+            possibleLoading()
+            possibleError()
         }
         .navigationBarHidden(true)
         .alert(isPresented: $showConfirmationMessage, content: savingAlert)
         .sheet(item: $manager.locationToAdd, content: sheetForLocation)
     }
-    
-    private func saveLocation() {
-        manager.getLocationAddress(form: manager.regin)
-    }
-    
-    private func proccedWithoutSaving() {
-        manager.setLocation(coordinates: manager.regin.center, addTo: addTo)
-        presentationMode.wrappedValue.dismiss()
-    }
-    
+}
+
+
+extension SelectLocationScreen {
     private func sheetForLocation(_ location: Location) -> some View {
         AddNewLocationView(location: location) { newLocation in
             manager.add(location: newLocation, addTo: addTo)
@@ -76,17 +50,43 @@ struct SelectLocationScreen: View {
             secondaryButton: .cancel(Text("Not now"), action: proccedWithoutSaving)
         )
     }
-}
-
-struct SelectLocationScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        SelectLocationScreen(addTo: .destination)
-            .preferredColorScheme(.dark)
-            .environmentObject(MapManager())
+    
+    private var content: some View {
+        VStack {
+            header
+            selectionMap
+        }
     }
-}
-
-extension SelectLocationScreen {
+    
+    @ViewBuilder
+    private func possibleLoading() -> some View {
+        if manager.busyRequestionGeoAddress {
+            LoadingView()
+        }
+    }
+    
+    @ViewBuilder
+    private func possibleError() -> some View {
+        if let _ = manager.requestionGeoAddressError {
+            ErrorView(error: $manager.requestionGeoAddressError)
+        }
+    }
+    
+    private func setAnnotition(location: LocationEntity) -> MapAnnotation<LocationMarker> {
+        MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
+            LocationMarker(label: location.name ?? "")
+        }
+    }
+    
+    private var selectionMap: some View {
+        Map(
+            coordinateRegion: addTo == .source ? $manager.sourceRegin : $manager.destinationRegin,
+            annotationItems: manager.userMarks,
+            annotationContent: setAnnotition
+        )
+        .edgesIgnoringSafeArea(.all)
+        .overlay(centerIndicator)
+    }
     
     private var backButton: some View {
         Button(action: {
@@ -103,7 +103,6 @@ extension SelectLocationScreen {
     private var setLocationButton: some View {
         Button(action: {
             showConfirmationMessage = true
-//            manager.getLocationAddress(form: manager.regin)
         }, label: {
             Image(systemName: "mappin.and.ellipse")
                 .font(.title2)
@@ -126,29 +125,33 @@ extension SelectLocationScreen {
             Text("Select location")
                 .font(Font.gallery.semiBold(17))
         )
-//        .background(
-//            Rectangle()
-//                .fill(Color.white.opacity(0.2))
-//                .blur(radius: 20)
-//                .edgesIgnoringSafeArea(.top)
-//        )
     }
     
     private var centerIndicator: some View {
-//        ZStack {
-//            Circle()
-//                .fill(Color(.systemPink).opacity(0.5))
-//                .frame(width: 44, height: 44)
-//                .opacity(0.5)
-//
-//            Image(systemName: "plus.viewfinder")
-//                .frame(width: 25, height: 25)
-//                .foregroundColor(Color.white)
-//        }
-        
         MapCenterIndicator()
     }
     
 }
 
 
+extension SelectLocationScreen {
+    
+    private func saveLocation() {
+        let regin = addTo == .source ? manager.sourceRegin : manager.destinationRegin
+        manager.getLocationAddress(form: regin)
+    }
+    
+    private func proccedWithoutSaving() {
+        let regin = addTo == .source ? manager.sourceRegin : manager.destinationRegin
+        manager.setLocation(coordinates: regin.center, addTo: addTo)
+        presentationMode.wrappedValue.dismiss()
+    }
+}
+
+struct SelectLocationScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        SelectLocationScreen(addTo: .destination)
+            .preferredColorScheme(.dark)
+            .environmentObject(MapManager())
+    }
+}

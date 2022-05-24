@@ -8,29 +8,28 @@
 import SwiftUI
 
 struct LocationMarker: View {
-    let location: Location
+    let label: String
     var body: some View {
-        VStack(spacing: 4) {
-            Text(location.name)
+        VStack(spacing: 0) {
+            Text(label)
                 .font(.headline)
-                .background(BlurView(style: .systemUltraThinMaterial, alpha: 0.7))
+                .frame(height: 20)
             ZStack {
                 Image(systemName: "drop")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 28, height: 40)
                     .rotationEffect(Angle(degrees: 180))
-                    .background(BlurView(style: .systemUltraThinMaterial, alpha: 0.7))
-                    .padding(.bottom, 30)
                 Image(systemName: "circle.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 10, height: 10)
-                    .offset(y: -20)
+                    .offset(y: -7)
                 
             }
         }
         .foregroundColor(Color.palette.red)
+        .offset(y: -30)
     }
 }
 
@@ -38,7 +37,7 @@ struct LocationMarker_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             LinearGradient.screen
-            LocationMarker(location: Location.eiffelTower)
+            LocationMarker(label: "Eiffel Tower")
         }
     }
 }

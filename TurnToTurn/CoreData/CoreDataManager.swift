@@ -12,10 +12,12 @@ class CoreDataManager: ObservableObject {
     
     @Published private(set) var locations = [LocationEntity]()
     
+    static var shared = CoreDataManager()
+    
     private let container: NSPersistentContainer
     private let context: NSManagedObjectContext
     
-    init() {
+    private init() {
         container = NSPersistentContainer(name: "TurnToTurnDataModel")
         container.loadPersistentStores { (_, error) in
             if let error = error {
@@ -24,6 +26,7 @@ class CoreDataManager: ObservableObject {
         }
         
         context = container.viewContext
+        loadAllLocations()
     }
     
     func loadAllLocations() {
@@ -31,6 +34,7 @@ class CoreDataManager: ObservableObject {
         
         do {
             locations = try context.fetch(request)
+            locations.forEach({print("\($0.latitude), \($0.longitude)")})
         } catch {
             debug("Can't load locations: \(error.localizedDescription)")
         }
@@ -53,6 +57,11 @@ class CoreDataManager: ObservableObject {
         entity.latitude = location.latitude
         entity.longitude = location.longitude
         
+        trySave()
+    }
+    
+    func delete(at offsets: IndexSet) {
+        offsets.map({locations[$0]}).forEach({context.delete($0)})
         trySave()
     }
     

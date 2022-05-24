@@ -120,48 +120,33 @@ private extension HomeScreen {
     }
     
     private var selectSourceText: some View {
-        Group {
-            if let location = manager.choosenLocation {
-                Text(location.name)
-            } else if let _ = manager.userLocation {
-                Text("Current Location")
-            } else {
-                Text("N/A")
-            }
+        AddressAutoCompleterView(
+            regin: manager.userRegin,
+            label: "Not set yet"
+        ) { location in
+            manager.updateSourceAddress(for: location)
+            hideKeyboard()
         }
-        .thickLabel()
     }
     
     private var locationBar: some View {
         HStack {
             LocationIcon()
                 .frame(width: 44, height: 44)
-//            selectSourceText
-            
-            AddressAutoCompleterView(
-                regin: manager.userRegin,
-                label: "Not set yet"
-            ) { location in
-                manager.updateSourceAddress(for: location)
-                hideKeyboard()
-            }
+            selectSourceText
             selectSourceButton
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .onChange(of: viewModel.isSourceBusy, perform: { value in
-            print("New Status: \(value)")
-        })
     }
     
     private var selectDestinationText: some View {
-        Group {
-            if let location = manager.destinationLocation {
-                Text(location.name)
-            } else {
-                Text("Not set yet")
-            }
+        AddressAutoCompleterView(
+            regin: manager.userRegin,
+            label: "Not set yet"
+        ) { location in
+            manager.updateDestinationAddress(for: location)
+            hideKeyboard()
         }
-        .thickLabel()
     }
     
     private var selectDestinationButton: some View {
@@ -179,36 +164,9 @@ private extension HomeScreen {
         HStack {
             DestinationIcon()
                 .frame(width: 44, height: 44)
-//            selectDestinationText
-            
-            AddressAutoCompleterView(
-                regin: manager.userRegin,
-                label: "Not set yet"
-            ) { location in
-                manager.updateDestinationAddress(for: location)
-                hideKeyboard()
-            }
-            
+            selectDestinationText
             selectDestinationButton
         }
-    }
-    
-    @ViewBuilder
-    private func sourceLabel() -> some View {
-        VStack {
-            
-        }
-    }
-    
-    @ViewBuilder
-    private func destinationLabel() -> some View {
-        Group {
-            if !viewModel.isDestinationBusy {
-                Text("Destination Label")
-                    .padding(.leading)
-            }
-        }
-        .allowsTightening(false)
     }
     
     private var stepsButton: some View {
@@ -273,14 +231,17 @@ private extension HomeScreen {
     private var blurLayer: some View {
         ZStack {
             Ellipse()
-            .fill(AngularGradient(
-                    gradient: Gradient(stops: [
-                .init(color: Color(#colorLiteral(red: 0.2633333206176758, green: 0.64089035987854, blue: 0.987500011920929, alpha: 1)), location: 0.14994069933891296),
-                .init(color: Color(#colorLiteral(red: 0.6176667213439941, green: 0.38333332538604736, blue: 1, alpha: 1)), location: 0.3641078472137451),
-                .init(color: Color(#colorLiteral(red: 0.24480903148651123, green: 0.7176761627197266, blue: 0.9958333373069763, alpha: 1)), location: 0.5341951847076416),
-                .init(color: Color(#colorLiteral(red: 0.047916680574417114, green: 0.22874994575977325, blue: 0.5, alpha: 1)), location: 0.8459962010383606)]),
-                    center: UnitPoint(x: 0.5, y: 0.49999999999999994)
-                  ))
+                .fill(
+                    AngularGradient(
+                        gradient: Gradient(stops: [
+                            .init(color: Color(#colorLiteral(red: 0.2633333206176758, green: 0.64089035987854, blue: 0.987500011920929, alpha: 1)), location: 0.14994069933891296),
+                            .init(color: Color(#colorLiteral(red: 0.6176667213439941, green: 0.38333332538604736, blue: 1, alpha: 1)), location: 0.3641078472137451),
+                            .init(color: Color(#colorLiteral(red: 0.24480903148651123, green: 0.7176761627197266, blue: 0.9958333373069763, alpha: 1)), location: 0.5341951847076416),
+                            .init(color: Color(#colorLiteral(red: 0.047916680574417114, green: 0.22874994575977325, blue: 0.5, alpha: 1)), location: 0.8459962010383606)
+                        ]),
+                        center: UnitPoint(x: 0.5, y: 0.49999999999999994)
+                    )
+                )
                 .blur(radius: 150)
         }
         .frame(width: 274, height: 204)

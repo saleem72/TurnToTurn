@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct StatictisScreen: View {
-    @Environment(\.presentationMode) var presentationMode
     @State private var date: Date = .init()
     @State private var week: [DailyCrossedDistance] = []
     @State private var showActivitiesMessage: Bool = true
@@ -16,9 +15,6 @@ struct StatictisScreen: View {
     var body: some View {
         
         ZStack {
-            
-//            LinearGradient.screen
-//                .edgesIgnoringSafeArea(.all)
             BackgroundView()
             content
             possibleActivitiesMessage()
@@ -58,29 +54,7 @@ extension StatictisScreen {
     }
     
     private var header: some View {
-        HStack {
-            
-            Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }, label: {
-                Image(systemName: "chevron.backward")
-                    .frame(width: 44, height: 44)
-                    .navigationButton(direction: .leading)
-            })
-            
-            Spacer(minLength: 0)
-            
-            Button(action: {}, label: {
-                Image(systemName: "xmark")
-                    .frame(width: 44, height: 44)
-                    .navigationButton(direction: .trailing)
-            })
-        }
-        .frame(height: 146)
-        .overlay(
-            Text("Timeline")
-                .font(Font.gallery.semiBold(17))
-        )
+        NavHeaderView(label: "Timeline") { }
     }
     
     @ViewBuilder
@@ -88,7 +62,6 @@ extension StatictisScreen {
         if week.count > 0 {
             GraphColumnsChartView(data: week, unit: "Km")
                 .frame(width: 231, height: 134)
-//                .frame(width: 350, height: 300)
         }
     }
     
