@@ -50,6 +50,7 @@ class MapManager: NSObject, ObservableObject {
             }
         }
     }
+    
     @Published var choosenLocation: Location? {
         didSet {
             if let value = choosenLocation {
@@ -57,6 +58,7 @@ class MapManager: NSObject, ObservableObject {
             }
         }
     }
+    
     @Published var destinationLocation: Location? {
         didSet {
             if let value = destinationLocation {
@@ -79,17 +81,6 @@ class MapManager: NSObject, ObservableObject {
     
     var userMarks: [LocationEntity] {
         dataManger.locations
-        
-//        dataManger.locations.map({
-//            Location(
-//                name: $0.name ?? "",
-//                city: "",
-//                address: $0.address ?? "",
-//                description: $0.details ?? "",
-//                createdAt: "",
-//                latitude: $0.latitude,
-//                longitude: $0.longitude)
-//        })
     }
     
     private var mapService = MapRelatedService()

@@ -34,7 +34,6 @@ class CoreDataManager: ObservableObject {
         
         do {
             locations = try context.fetch(request)
-            locations.forEach({print("\($0.latitude), \($0.longitude)")})
         } catch {
             debug("Can't load locations: \(error.localizedDescription)")
         }
