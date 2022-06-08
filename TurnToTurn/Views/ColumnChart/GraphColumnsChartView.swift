@@ -16,7 +16,7 @@ struct GraphColumnsChartView<T: GraphColumnsChartItem>: View {
     let verticalSteps: Int = 4
     let verticalGap: CGFloat = 32
     let horizontalGap: CGFloat = 24
-    let font: Font = Font.gallery.medium(12)
+    let font: Font = Font.gallery.regular(12)
     
     @State private var size: CGSize = .zero
     @State private var contentSize: CGSize = .zero

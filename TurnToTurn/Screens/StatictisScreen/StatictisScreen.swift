@@ -99,7 +99,7 @@ extension StatictisScreen {
                             .font(.headline)
                         
                         Text("Km")
-                            .font(Font.gallery.headline())
+                            .font(Font.gallery.headline)
                     }
                     .foregroundColor(.white)
                 })
@@ -113,7 +113,7 @@ extension StatictisScreen {
                             .font(.headline)
                         
                         Text("Following")
-                            .font(Font.gallery.headline())
+                            .font(Font.gallery.headline)
                     }
                     .foregroundColor(.white)
                 })
@@ -129,7 +129,7 @@ extension StatictisScreen {
                             .font(.headline)
                         
                         Text("Map")
-                            .font(Font.gallery.headline())
+                            .font(Font.gallery.headline)
                     }
                     .foregroundColor(.white)
                 })
@@ -143,7 +143,7 @@ extension StatictisScreen {
                             .font(.headline)
                         
                         Text("Saved")
-                            .font(Font.gallery.headline())
+                            .font(Font.gallery.headline)
                     }
                     .foregroundColor(.white)
                 })

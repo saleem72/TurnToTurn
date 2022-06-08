@@ -28,7 +28,7 @@ struct ErrorView: View {
                     }, label: {
                         HStack {
                             Image(systemName: "arrow.triangle.2.circlepath")
-                                .font(Font.gallery.headline())
+                                .font(Font.gallery.headline)
                                 .foregroundColor(Color.white)
                             
                             Text("Retry")

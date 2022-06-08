@@ -37,7 +37,7 @@ struct DropdownList: View {
                                 .font(.subheadline)
                                 .rotationEffect(Angle(degrees: showList ? 180 : 0))
                         }
-                        .font(Font.gallery.subheadline())
+                        .font(Font.gallery.subheadline)
                         .foregroundColor(foreColor)
                         .frame(width: width, height: itemHeight)
                         .background(
@@ -100,7 +100,7 @@ extension DropdownList {
                                     )
                                     .frame(height: itemHeight)
                                     .frame(maxWidth: .infinity)
-                                    .font(Font.gallery.subheadline())
+                                    .font(Font.gallery.subheadline)
                                     .foregroundColor(foreColor)
                                     
                             }

@@ -181,7 +181,7 @@ extension TurnToTurnScreen {
         }, label: {
             HStack {
                 Image(systemName: "location.north.fill")
-                    .font(Font.gallery.headline())
+                    .font(Font.gallery.headline)
                     .foregroundColor(Color.white)
                 
                 Text("Start")

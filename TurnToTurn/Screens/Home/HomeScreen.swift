@@ -104,7 +104,7 @@ private extension HomeScreen {
     
     private var greetingMessage: some View {
         Text("Hello, Sourany")
-            .font(Font.gallery.headline())
+            .font(Font.gallery.headline)
             .foregroundColor(Color.palette.primary)
     }
     
@@ -113,7 +113,7 @@ private extension HomeScreen {
             viewModel.gotoMapSelectionSource = true
         }, label: {
             Image(systemName: "ellipsis")
-                .font(Font.gallery.headline())
+                .font(Font.gallery.headline)
                 .foregroundColor(Color.palette.secondary)
                 .frame(width: 44, height: 44)
         })
@@ -154,7 +154,7 @@ private extension HomeScreen {
             viewModel.gotoMapSelectionDestination = true
         }, label: {
             Image(systemName: "shuffle")
-                .font(Font.gallery.headline())
+                .font(Font.gallery.headline)
                 .foregroundColor(Color.palette.secondary)
                 .frame(width: 44, height: 44)
         })
@@ -173,7 +173,7 @@ private extension HomeScreen {
         Button(action: {}, label: {
             HStack {
                 Image(systemName: "list.bullet")
-                    .font(Font.gallery.headline())
+                    .font(Font.gallery.headline)
                     .foregroundColor(Color.primary)
                 
                 Text("Steps")
@@ -190,7 +190,7 @@ private extension HomeScreen {
         }, label: {
             HStack {
                 Image(systemName: "location.north.fill")
-                    .font(Font.gallery.headline())
+                    .font(Font.gallery.headline)
                     .foregroundColor(Color.primary)
                 
                 Text("Start")
@@ -207,7 +207,7 @@ private extension HomeScreen {
         Button(action: {}, label: {
             HStack {
                 Image(systemName: "list.bullet")
-                    .font(Font.gallery.headline())
+                    .font(Font.gallery.headline)
                     .foregroundColor(Color.primary)
                 
                 Text("Pin")

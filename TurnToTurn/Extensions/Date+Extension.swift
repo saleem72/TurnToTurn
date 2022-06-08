@@ -8,11 +8,13 @@
 import Foundation
 
 fileprivate class DateManager {
-    static var shared = DateManager()
-    
+//    static var shared = DateManager()
+//    private init() { }
     private var formatter = DateFormatter()
     
-    private init() { }
+    init() {
+        print("DateManager class has initialized")
+    }
    
     func month(from date: Date) -> String {
         formatter.dateFormat = "LLLL"
@@ -79,6 +81,9 @@ fileprivate class DateManager {
 }
 
 extension Date {
+    
+    static fileprivate var dateManager: DateManager = .init()
+    
     func equal(date: Date) -> Bool {
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: date)
         let selfComponents = Calendar.current.dateComponents([.year, .month, .day], from: self)
@@ -101,7 +106,7 @@ extension Date {
     }
     
     var weekday: String {
-        return DateManager.shared.day(from: self)
+        return Self.dateManager.day(from: self)
     }
     
     var day: Int {
@@ -110,7 +115,7 @@ extension Date {
     }
     
     var month: String {
-        return DateManager.shared.month(from: self)
+        return Self.dateManager.month(from: self)
     }
     
     var year: Int {
@@ -127,7 +132,7 @@ extension Date {
         var result = [String]()
         for i in 1...12 {
             let date = dateComponents(day: 1, month: i, year: 2000)
-            result.append(DateManager.shared.month(from: date))
+            result.append(Self.dateManager.month(from: date))
         }
         return result
     }
@@ -170,19 +175,19 @@ extension Date {
     }
     
     var longDate: String {
-        DateManager.shared.longDate(self)
+        Self.dateManager.longDate(self)
     }
     
     var mediumDate: String {
-        DateManager.shared.mediumDate(self)
+        Self.dateManager.mediumDate(self)
     }
     
     var shortDate: String {
-        DateManager.shared.shortDate(self)
+        Self.dateManager.shortDate(self)
     }
     
     var custom: String {
-        DateManager.shared.custom(self)
+        Self.dateManager.custom(self)
     }
     
     func date(byAdding object : Calendar.Component, value: Int) -> Date {
@@ -190,27 +195,27 @@ extension Date {
     }
     
     static func from(_ str: String) -> Date {
-        DateManager.shared.from(str)
+        Self.dateManager.from(str)
     }
     
     var shortTime: String {
-        DateManager.shared.shortTime(self)
+        Self.dateManager.shortTime(self)
     }
     
     var mediumTime: String {
-        DateManager.shared.mediumTime(self)
+        Self.dateManager.mediumTime(self)
     }
     
     static func dateFormatter() -> DateFormatter {
-        DateManager.shared.dateFormatter()
+        Self.dateManager.dateFormatter()
     }
     
     static func fromDateTime(_ str: String) -> Date {
-        DateManager.shared.fromDateTime(str)
+        Self.dateManager.fromDateTime(str)
     }
     
     var dateTime: String {
-        DateManager.shared.dateTime(self)
+        Self.dateManager.dateTime(self)
     }
     
 //    var elapsedPeriod: String {
